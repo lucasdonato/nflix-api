@@ -2,6 +2,7 @@
 require_relative "models/user_model"
 
 FactoryBot.define do
+  
   factory :user, class: UserModel do
     full_name { "Papito Skywalker" }
     email { "papito@jedi.com" }
