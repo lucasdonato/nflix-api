@@ -22,7 +22,7 @@ FactoryBot.define do
     after(:build) do |user|
       #puts "apagando o email " + user.email
       Database.new.delete_user(user.email)
-      ApiUser.save(user.to_hash)
+      ApiUser.save(user.convert_hash)
     end
   end
 
