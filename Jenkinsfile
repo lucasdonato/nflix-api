@@ -26,7 +26,8 @@ pipeline {
                 sh "bundle exec rspec"
             }
             post {
-                always {                  
+                always {           
+                    junit 'log/report.xml'       
                     //configurações do slack
                     slackSend channel: "#automacao-de-testes",
                         color: COLOR_MAP[currentBuild.currentResult],
