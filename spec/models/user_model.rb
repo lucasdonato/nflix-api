@@ -1,8 +1,8 @@
 
 class UserModel
-  attr_accessor :full_name, :email, :password
+  attr_accessor :id, :full_name, :email, :password
 
-  def convert_hash
+  def to_hash
     {
       full_name: @full_name,
       email: @email,
