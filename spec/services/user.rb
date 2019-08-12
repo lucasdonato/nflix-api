@@ -2,7 +2,7 @@
 
 class ApiUser
   include HTTParty
-  base_uri "http://localhost:3001"
+  base_uri "http://nflix-api-users:3001"
   headers "Content-Type" => "application/json"
 
   def self.token(user_email, user_pass)
