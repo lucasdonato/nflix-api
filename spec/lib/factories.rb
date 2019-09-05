@@ -1,6 +1,8 @@
 require "faker"
 require_relative "../models/user_model"
 
+@email = "papito@jedi.com"
+
 FactoryBot.define do
   factory :user, class: UserModel do
     full_name { "Papito Skywalker" }
@@ -35,7 +37,7 @@ FactoryBot.define do
 
   factory :empty_name_user, class: UserModel do
     full_name { "" }
-    email { "papito@jedi.com" }
+    email { @email }
     password { "jedi123" }
   end
 
@@ -47,12 +49,12 @@ FactoryBot.define do
 
   factory :empty_password_user, class: UserModel do
     full_name { "Fernando Papito" }
-    email { "papito@jedi.com" }
+    email { @email }
     password { "" }
   end
 
   factory :null_name_user, class: UserModel do
-    email { "papito@jedi.com" }
+    email { @email }
     password { "jedi123" }
   end
 
@@ -63,6 +65,6 @@ FactoryBot.define do
 
   factory :null_password_user, class: UserModel do
     full_name { "Fernando Papito" }
-    email { "papito@jedi.com" }
+    email { @email }
   end
 end
